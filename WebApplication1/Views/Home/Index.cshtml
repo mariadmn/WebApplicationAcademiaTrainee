@@ -9,8 +9,14 @@
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2>Academia Trainee</h2>
           <p>Aprendendo aplicações Web com .NET</p>
-          <button class="btn btn-outline-secondary text-dark" type="button">Isso é um botão inutil</button>
-          <button  class="btn btn-outline-secondary" type="button"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Redireciona para Privacy</a></button>
+          <button class="btn btn-outline-secondary text-dark" type="button" onclick="alerta()">Isso é um botão inútil</button>
+          <a asp-area="" asp-controller="Home" asp-action="Privacy"><button class="btn btn-outline-secondary text-dark" type="button">Redireciona</button></a>
         </div>
     </div>
 </div>
+
+<script>
+    function alerta(){
+        alert('Você clicou no botão inútil');
+    }
+</script>
