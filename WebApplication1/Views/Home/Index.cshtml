@@ -5,16 +5,38 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <div class="col-md-12"> 
+    <div class="col-md-12">
         <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Academia Trainee</h2>
-          <p>Aprendendo aplicações Web com .NET</p>
-          <button class="btn btn-outline-secondary text-dark" type="button" onclick="alerta()">Isso é um botão inútil</button>
-          <a asp-area="" asp-controller="Home" asp-action="Privacy"><button class="btn btn-outline-secondary text-dark" type="button">Redireciona</button></a>
+            <h2>Academia Trainee</h2>
+            <p>Aprendendo aplicações Web com .NET</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Isso é um botão inútil
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Surpresa!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Você cliclou no botão inútil e perdeu seu tempo lendo este texto.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy"><button class="btn btn-outline-secondary text-dark" type="button">Redireciona</button></a>
         </div>
     </div>
 </div>
 
+<!-- Tirei isso do codigo -->
 <script>
     function alerta(){
         alert('Você clicou no botão inútil');
