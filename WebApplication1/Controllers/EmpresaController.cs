@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using WebApplication1.Models;
 
+
+
 namespace WebApplication1.Controllers
 {
     public class EmpresaController : Controller
@@ -16,6 +18,11 @@ namespace WebApplication1.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Create([Bind("Codigo,Nome,NomeFantasia,CNPJ")] EmpresaModel empresaModel)
+        { 
+            return View("Index");
         }
     }
 }

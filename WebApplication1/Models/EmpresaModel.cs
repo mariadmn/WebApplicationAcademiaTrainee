@@ -2,21 +2,19 @@
 {
     public class EmpresaModel
     {
-        public string? Nome { get; set; }
 
-        public string? NomeFantasia { get; set; }
-
+        public string Nome { get; set; }
+        public string NomeFantasia { get; set; }
         public int Codigo { get; set; }
+        public string CNPJ { get; set; }
 
-        public string? CNPJ { get; set; }
-
-        public EmpresaModel(string Nome, string NomeFantasia, int Codigo, string CNPJ)
+        /*public EmpresaModel(string Nome, string NomeFantasia, int Codigo, string CNPJ)
         {
             this.Nome = Nome;
             this.NomeFantasia = NomeFantasia;
             this.Codigo = Codigo;
             this.CNPJ = CNPJ;
-        }
+        }*/
         
     }
 }

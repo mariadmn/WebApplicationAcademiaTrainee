@@ -1,25 +1,28 @@
-﻿@{
+﻿@model EmpresaModel
+@{
     ViewData["Title"] = "Empresa";
 }
+
 <h1>@ViewData["Title"]</h1>
 <p>Página de cadastro de empresa.</p>
 
-<form>
+<form asp-action="Create">
     <div class="mb-3">
         <label for="exampleInputName" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="exampleInputName">
+        <input type="text" class="form-control" id="exampleInputName" asp-for="Nome" placeholder="ex: Evino ES Mercadorias" >
     </div>
     <div class="mb-3">
         <label for="exampleInputFantasyName" class="form-label">Nome Fantasia</label>
-        <input type="text" class="form-control" id="exampleInputFantasyName">
+        <input type="text" class="form-control" id="exampleInputFantasyName" asp-for="NomeFantasia" placeholder="ex: Evino" >
     </div>
     <div class="mb-3">
         <label for="exampleInputCNPJ" class="form-label">CNPJ</label>
-        <input type="text" class="form-control" id="exampleInputCNPJ">
+        <input type="text" class="form-control" id="exampleInputCNPJ" asp-for="CNPJ" placeholder="ex: XX.XXX.XXX/0001-XX" >
     </div>
+    <!--
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex: seunome@email.com">
         <div id="emailHelp" class="form-text">Pode ficar tranquilo que não compartilhamos seu email com ninguém.</div>
     </div>
     <div class="mb-3">
@@ -27,10 +30,11 @@
         <input type="password" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Aceito todos os termos e condições</label>
+        <input type="checkbox" class="form-check-input" value="1" id="terms_and_conditions" onclick="terms_changed(this)">
+        <label class="form-check-label" for="terms_and_conditions">Aceito todos os termos e condições</label>
     </div>
-    <!--Coloquei pro botão de enviar redirecionar pra Home-->
-    <button type="submit" class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Enviar</button>
+    -->
+    <!---->
+    <button type="submit" id="submit_button" value= "Create" class="btn btn-primary">Salvar</button>
 </form>
 
