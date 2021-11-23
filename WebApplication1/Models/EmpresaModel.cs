@@ -8,7 +8,8 @@
         public int Codigo { get; set; }
         public string CNPJ { get; set; }
 
-        /*public EmpresaModel(string Nome, string NomeFantasia, int Codigo, string CNPJ)
+        /* Não sei pq se tiver constrtor dá merda
+         * public EmpresaModel(string Nome, string NomeFantasia, int Codigo, string CNPJ)
         {
             this.Nome = Nome;
             this.NomeFantasia = NomeFantasia;

@@ -29,12 +29,17 @@
         <label for="exampleInputPassword1" class="form-label">Senha</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
     </div>
+    -->
     <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" value="1" id="terms_and_conditions" onclick="terms_changed(this)">
+        <input type="checkbox" class="form-check-input" value="1" id="terms_and_conditions" onchange="document.getElementById('submit_button').disabled = !this.checked;">
         <label class="form-check-label" for="terms_and_conditions">Aceito todos os termos e condições</label>
     </div>
-    -->
     <!---->
-    <button type="submit" id="submit_button" value= "Create" class="btn btn-primary">Salvar</button>
+    <button type="submit" id="submit_button" value= "Create" class="btn btn-primary" >Salvar</button>
 </form>
 
+<script>
+    function EnableSubmit(){
+
+    }
+</script>
