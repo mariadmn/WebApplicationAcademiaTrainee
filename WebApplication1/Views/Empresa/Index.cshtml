@@ -9,15 +9,15 @@
 <form asp-action="Create">
     <div class="mb-3">
         <label for="exampleInputName" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="exampleInputName" asp-for="Nome" placeholder="ex: Evino ES Mercadorias" >
+        <input type="text" class="form-control" id="exampleInputName" asp-for="Nome" placeholder="ex: Evino ES Mercadorias">
     </div>
     <div class="mb-3">
         <label for="exampleInputFantasyName" class="form-label">Nome Fantasia</label>
-        <input type="text" class="form-control" id="exampleInputFantasyName" asp-for="NomeFantasia" placeholder="ex: Evino" >
+        <input type="text" class="form-control" id="exampleInputFantasyName" asp-for="NomeFantasia" placeholder="ex: Evino">
     </div>
     <div class="mb-3">
         <label for="exampleInputCNPJ" class="form-label">CNPJ</label>
-        <input type="text" class="form-control" id="exampleInputCNPJ" asp-for="CNPJ" placeholder="ex: XX.XXX.XXX/0001-XX" >
+        <input type="text" class="form-control" id="exampleInputCNPJ" asp-for="CNPJ" placeholder="ex: XX.XXX.XXX/0001-XX">
     </div>
     <!--
     <div class="mb-3">
@@ -32,7 +32,7 @@
     -->
     <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" value="1" id="terms_and_conditions" onchange="document.getElementById('submit_button').disabled = !this.checked;">
-        <label class="form-check-label" for="terms_and_conditions" >Aceito todos os termos e condições</label>
+        <label class="form-check-label" for="terms_and_conditions">Aceito todos os termos e condições</label>
     </div>
-    <button type="submit" id="submit_button" value= "Create" class="btn btn-primary" disabled>Salvar</button>
+    <button type="submit" id="submit_button" value="Create" class="btn btn-primary" disabled>Salvar</button>
 </form>

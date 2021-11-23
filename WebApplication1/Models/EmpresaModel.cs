@@ -16,6 +16,6 @@
             this.Codigo = Codigo;
             this.CNPJ = CNPJ;
         }*/
-        
+
     }
 }

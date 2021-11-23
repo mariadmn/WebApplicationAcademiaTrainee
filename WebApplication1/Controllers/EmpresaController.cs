@@ -2,8 +2,6 @@
 using System.Diagnostics;
 using WebApplication1.Models;
 
-
-
 namespace WebApplication1.Controllers
 {
     public class EmpresaController : Controller
