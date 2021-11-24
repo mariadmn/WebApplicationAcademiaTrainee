@@ -54,14 +54,16 @@ namespace WebApplication1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nome,Email,Codigo,QuantidadeFilhos,DataNascimento,Salario")] PessoaModel pessoaModel)
+        //aqui eu coloquei a situação no bind
+        public async Task<IActionResult> Create([Bind("Nome,Email,Codigo,QuantidadeFilhos,DataNascimento,Salario,Situação")] PessoaModel pessoaModel)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(pessoaModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
+            //if (ModelState.IsValid)
+            //{
+            pessoaModel.Situação = true;//n sei se ta certo
+            _context.Add(pessoaModel);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            //}
             return View(pessoaModel);
         }
 
@@ -86,7 +88,8 @@ namespace WebApplication1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, [Bind("Nome,Email,Codigo,QuantidadeFilhos,DataNascimento,Salario")] PessoaModel pessoaModel)
+        //aqui eu coloquei a situação no bind
+        public async Task<IActionResult> Edit(int? id, [Bind("Nome,Email,Codigo,QuantidadeFilhos,DataNascimento,Salario,Situação")] PessoaModel pessoaModel)
         {
             if (id != pessoaModel.Codigo)
             {
@@ -126,6 +129,8 @@ namespace WebApplication1.Controllers
 
             var pessoaModel = await _context.PessoaModel
                 .FirstOrDefaultAsync(m => m.Codigo == id);
+
+
             if (pessoaModel == null)
             {
                 return NotFound();
@@ -149,5 +154,60 @@ namespace WebApplication1.Controllers
         {
             return _context.PessoaModel.Any(e => e.Codigo == id);
         }
+
+        public async Task<IActionResult> AlterarStatus(int id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var pessoaModel = await _context.PessoaModel.FindAsync(id);
+
+            if (pessoaModel == null)
+            {
+                return NotFound();
+            }
+            return await AlteraValor(id, pessoaModel);
+
+        }
+
+        // POST: PessoaModels/AlteraValor/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> AlteraValor(int id, PessoaModel pessoaModel)
+        {
+            if (id != pessoaModel.Codigo)
+            {
+                return NotFound();
+            }
+
+            if (pessoaModel.Situação == true)
+            {
+                pessoaModel.Situação = false;
+            }
+            else
+            {
+                pessoaModel.Situação = true;
+            }
+            try
+            {
+                _context.Update(pessoaModel);
+                await _context.SaveChangesAsync();
+            } catch (DbUpdateConcurrencyException)
+            {
+                if (!PessoaModelExists(pessoaModel.Codigo))
+                {
+                    return NotFound();
+                } else
+                {
+                    throw;
+                }
+            }
+            
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }

@@ -18,10 +18,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <!--
-            <th>
-                @Html.DisplayNameFor(model => model.Codigo)
-            </th> -->
             <th>
                 @Html.DisplayNameFor(model => model.QuantidadeFilhos)
             </th>
@@ -30,6 +26,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Situação)
             </th>
             <th></th>
         </tr>
@@ -43,10 +42,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <!--
-            <td>
-                @Html.DisplayFor(modelItem => item.Codigo)
-            </td> -->
             <td>
                 @Html.DisplayFor(modelItem => item.QuantidadeFilhos)
             </td>
@@ -57,7 +52,17 @@
                 @Html.DisplayFor(modelItem => item.Salario)
             </td>
             <td>
+                    @if (item.Situação == true)
+                    {
+                        <span>Ativo</span>
+                    } else
+                    {
+                        <span>Inativo</span>
+                    }
+            </td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> |
+                <a asp-action="AlterarStatus" asp-route-id="@item.Codigo">Alterar Status</a> |
                 <a asp-action="Details" asp-route-id="@item.Codigo">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
             </td>
