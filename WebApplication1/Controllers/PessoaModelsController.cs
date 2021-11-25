@@ -127,19 +127,19 @@ namespace WebApplication1.Controllers
             //Parte de checagem de dados
             if (pessoaModel.Situação == false)
             {
-                ModelState.AddModelError("", "Não é possível editar uma pessoa com a situação Inativa");
+                ModelState.AddModelError("Regra de negócio", "Não é possível editar uma pessoa com a situação Inativa");
                 return View(pessoaModel);
             }
 
             if (pessoaModel.QuantidadeFilhos < 0)
             {
-                ModelState.AddModelError("", "A quantidade de filhos tem que ser maior ou igual a zero!");
+                ModelState.AddModelError("Regra de negócio", "A quantidade de filhos tem que ser maior ou igual a zero!");
                 return View(pessoaModel);
             }
 
             if (pessoaModel.Salario < 1200 || pessoaModel.Salario > 13000)
             {
-                ModelState.AddModelError("", "O salário tem que ser entre 1200 e 13000!");
+                ModelState.AddModelError("Regra de negócio", "O salário tem que ser entre 1200 e 13000!");
                 return View(pessoaModel);
             }
 
@@ -147,14 +147,14 @@ namespace WebApplication1.Controllers
 
             if (verifyEmail.Count() > 0)
             {
-                ModelState.AddModelError("", "Este email já está cadastrado!");
+                ModelState.AddModelError("Regra de negócio", "Este email já está cadastrado!");
                 return View(pessoaModel);
             }
 
             DateTime defaultDate = new DateTime(1990, 1, 1, 00, 00, 00);
             if (pessoaModel.DataNascimento < defaultDate)
             {
-                ModelState.AddModelError("", "A data de nascimento tem que ser depois de 01/01/1990!");
+                ModelState.AddModelError("Regra de negócio", "A data de nascimento tem que ser depois de 01/01/1990!");
                 return View(pessoaModel);
             }
 
@@ -215,7 +215,7 @@ namespace WebApplication1.Controllers
             //Parte de checagem de dados
             if (pessoaModel.Situação == true)
             {
-                ModelState.AddModelError("", "Não é possível excluir uma pessoa com a situação Ativa");
+                ModelState.AddModelError("Regra de negócio", "Não é possível excluir uma pessoa com a situação Ativa");
                 return View(pessoaModel);
             }
 
