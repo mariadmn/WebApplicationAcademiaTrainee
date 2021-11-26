@@ -1,0 +1,48 @@
+﻿@model WebApplication1.Models.EmpresaModel
+@Html.ValidationSummary()
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>EmpresaModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeFantasia" class="control-label"></label>
+                <input asp-for="NomeFantasia" class="form-control" />
+                <span asp-validation-for="NomeFantasia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CNPJ" class="control-label"></label>
+                <input asp-for="CNPJ" class="form-control" placeholder="XX.XXX.XXX/0001-XX" />
+                <span asp-validation-for="CNPJ" class="text-danger"></span>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" value="1" id="terms_and_conditions" onchange="document.getElementById('submit_button').disabled = !this.checked;">
+                <label class="form-check-label" for="terms_and_conditions"><a href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank">Aceito todos os termos e condições</a></label>
+            </div>
+            <div class="form-group">
+                <input style="margin:5px;" type="submit" id="submit_button" value="Create" class="btn btn-primary" disabled />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index"><button style="margin:5px;" class="btn btn-dark" type="button">Voltar</button></a> 
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

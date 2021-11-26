@@ -2,12 +2,12 @@
 @Html.ValidationSummary()
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
-<h4>PessoaModel</h4>
+<h4>Pessoa Model</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -40,7 +40,6 @@
                 <input asp-for="Salario" class="form-control" />
                 <span asp-validation-for="Salario" class="text-danger"></span>
             </div>
-            <!--Não sei como fazer um select mds-->
             <div class="form-group">
                 <label asp-for="Situação" class="control-label"></label>
                 <select asp-for="Situação" class="form-select" >
