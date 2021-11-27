@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Empresas Cadastradas</h1>
 
 <p>
     <a asp-action="Create"><button class="btn btn-primary" type="button">Novo Cadastro</button></a>
@@ -51,10 +51,10 @@
                     }
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Edit</button></a> |
+                    <a asp-action="Edit" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Editar</button></a> |
                     <a asp-action="AlterarStatus" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Alterar Status</button></a> |
-                    <a asp-action="Details" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Details</button></a> |
-                    <a asp-action="Delete" asp-route-id="@item.Codigo"><button class="btn btn-danger" type="button">Delete</button></a>
+                    <a asp-action="Details" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Detalhes</button></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Codigo"><button class="btn btn-danger" type="button">Deletar</button></a>
                 </td>
             </tr>
         }
