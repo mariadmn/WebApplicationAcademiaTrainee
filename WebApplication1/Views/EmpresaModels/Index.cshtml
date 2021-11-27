@@ -7,9 +7,9 @@
 <h1>Empresas Cadastradas</h1>
 
 <p>
-    <a asp-action="Create"><button class="btn btn-primary" type="button">Novo Cadastro</button></a>
+    <a asp-action="Create"><button class="btn btn-primary" type="button"><i class="fa fa-fw fa-plus"></i> Novo Cadastro</button></a>
 </p>
-<table class="table">
+<table class="table" >
     <thead>
         <tr>
             <th>
@@ -51,10 +51,10 @@
                     }
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Editar</button></a> |
-                    <a asp-action="AlterarStatus" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Alterar Status</button></a> |
-                    <a asp-action="Details" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Detalhes</button></a> |
-                    <a asp-action="Delete" asp-route-id="@item.Codigo"><button class="btn btn-danger" type="button">Deletar</button></a>
+                    <a asp-action="Edit" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Editar <i class="fa fa-pencil"></i></button></a> 
+                    <a asp-action="AlterarStatus" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Mudar Status</button></a> 
+                    <a asp-action="Details" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Detalhes <i class="fa fa-info-circle"></i></button></a> 
+                    <a asp-action="Delete" asp-route-id="@item.Codigo"><button class="btn btn-danger" type="button">Deletar <i class="fa fa-fw fa-trash"></i></button></a>
                 </td>
             </tr>
         }

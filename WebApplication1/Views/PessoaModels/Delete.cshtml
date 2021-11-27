@@ -2,14 +2,13 @@
 @Html.ValidationSummary()
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Deletar";
 }
 
 <h1>Deletar</h1>
 
 <h3>Tem certeza que quer deletar esta pessoa?</h3>
 <div>
-    <h4>PessoaModel</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -23,12 +22,6 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Codigo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Codigo)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.QuantidadeFilhos)
@@ -65,7 +58,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Codigo" />
-         <a asp-action="Index"><button class="btn btn-dark" type="button">Voltar</button></a> |
+         <a asp-action="Index"><button class="btn btn-dark" type="button"><i class="fa fa-arrow-left"></i> Voltar</button></a> |
         <input type="submit" value="Delete" class="btn btn-danger" /> 
     </form>
 </div>

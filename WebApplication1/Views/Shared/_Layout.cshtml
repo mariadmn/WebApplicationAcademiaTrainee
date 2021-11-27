@@ -10,32 +10,34 @@
 </head>
 <body>
     <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/logo.png"/></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Cadastrar</a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdown04">
-                                <li><a class="dropdown-item text-light" asp-area="" asp-controller="EmpresaModels" asp-action="Index">Empresa</a></li>
-                                <li><a class="dropdown-item text-light" asp-area="" asp-controller="PessoaModels" asp-action="Index">Pessoa</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/img/logo.png" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-fw fa-home"></i> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy"><i class="fa fa-fw fa-lock"></i> Privacy</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-fw fa-plus"></i> Cadastrar</a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdown04">
+                                    <li><a class="dropdown-item text-light" asp-area="" asp-controller="EmpresaModels" asp-action="Index"><i class="fa fa-fw fa-building"></i> Empresa</a></li>
+                                    <li><a class="dropdown-item text-light" asp-area="" asp-controller="PessoaModels" asp-action="Index"><i class="fa fa-fw fa-user-plus"></i> Pessoa</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -43,7 +45,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" style="position: absolute;">
         <div class="container">
             &copy; 2021 - WebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

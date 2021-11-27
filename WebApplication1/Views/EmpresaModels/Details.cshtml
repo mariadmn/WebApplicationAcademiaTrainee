@@ -2,13 +2,12 @@
 @Html.ValidationSummary()
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
-<h1>Details</h1>
+<h1>Detalhes</h1>
 
 <div>
-    <h4>EmpresaModel</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -45,6 +44,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Index"><button class="btn btn-dark" type="button">Voltar</button></a> |
-    <a asp-action="Edit" asp-route-id="@Model.Codigo"><button class="btn btn-primary" type="button">Edit</button></a> 
+    <a asp-action="Index"><button class="btn btn-dark" type="button"><i class="fa fa-arrow-left"></i> Voltar</button></a> |
+    <a asp-action="Edit" asp-route-id="@Model.Codigo"><button class="btn btn-primary" type="button">Edit <i class="fa fa-pencil"></i></button></a> 
 </div>

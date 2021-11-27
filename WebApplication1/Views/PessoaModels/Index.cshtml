@@ -8,8 +8,9 @@
 <h1>Pessoas Cadastradas</h1>
 
 <p>
-    <a asp-action="Create"><button class="btn btn-primary" type="button">Novo Cadastro</button></a>
+    <a asp-action="Create"><button class="btn btn-primary" type="button"><i class="fa fa-fw fa-plus"></i> Novo Cadastro</button></a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -62,13 +63,13 @@
                     {
                         <span>Inativo</span>
                     }
-                    
+
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Edit</button></a> |
-                    <a asp-action="AlterarStatus" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Alterar Status</button></a> |
-                    <a asp-action="Details" asp-route-id="@item.Codigo"><button class="btn btn-dark" type="button">Details</button></a> |
-                    <a asp-action="Delete" asp-route-id="@item.Codigo"><button class="btn btn-danger" type="button">Delete</button></a>
+                    <a asp-action="Edit" asp-route-id="@item.Codigo"><button class="btn btn-dark" style="width:74px;height:35px;font-size:small" type="button">Editar <i class="fa fa-pencil small"></i></button></a>
+                    <a asp-action="AlterarStatus" asp-route-id="@item.Codigo"><button class="btn btn-dark" style="width:105px;height:35px;font-size:small" type="button">Mudar Status</button></a>
+                    <a asp-action="Details" asp-route-id="@item.Codigo"><button class="btn btn-dark" style="width:92px;height:35px;font-size:small" type="button">Detalhes <i class="fa fa-info-circle"></i></button></a>
+                    <a asp-action="Delete" asp-route-id="@item.Codigo"><button class="btn btn-danger" style="width:88px;height:35px;font-size:small" type="button">Deletar <i class="fa fa-fw fa-trash"></i></button></a>
 
                 </td>
             </tr>

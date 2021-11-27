@@ -15,6 +15,8 @@ namespace WebApplication1.Models
 
         [Display(Name = "Data de Nascimento")]
         public DateTime DataNascimento { get; set; }
+
+        [Display(Name = "Salário")]
         public decimal Salario { get; set; }
         public bool Situação { get; set; }
     }
