@@ -1,4 +1,6 @@
 # WebApplicationAcademiaTrainee
 Aplicação Web com .NET feita na Academia Trainee da VixTeam
 
-obs: o outro contribuinte desse repositório era que eu tinha esquecido de sair do github do meu irmão
+Obs: Os controllers EmpresaController e PessoaController não estão sendo usados, mas deixei eles no projeto para que vc pudesse ver, assim como as view Pessoa e Empresa
+
+Obs2: O outro contribuinte desse repositório era que eu tinha esquecido de sair do github do meu irmão
